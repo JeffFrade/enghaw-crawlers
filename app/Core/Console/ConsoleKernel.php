@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Console;
+namespace App\Core\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
-use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Foundation\Console\Kernel;
 
-class Kernel extends ConsoleKernel
+class ConsoleKernel extends Kernel
 {
     /**
      * The Artisan commands provided by your application.
@@ -37,6 +37,6 @@ class Kernel extends ConsoleKernel
     {
         $this->load(__DIR__.'/Commands');
 
-        require base_path('routes/console.php');
+        require base_path('app/Core/console.php');
     }
 }
