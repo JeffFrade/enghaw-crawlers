@@ -9,6 +9,10 @@ class Vagalume extends CrawlerUtil implements CrawlerInterface
 {
     public function run()
     {
-        // TODO: Implement run() method.
+        $this->setIniVariables();
+
+        dump("Ola");
+
+        return true;
     }
 }

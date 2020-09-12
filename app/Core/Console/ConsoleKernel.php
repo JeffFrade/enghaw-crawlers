@@ -2,6 +2,7 @@
 
 namespace App\Core\Console;
 
+use App\Core\Console\Commands\CrawlerStartCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel;
 
@@ -13,7 +14,7 @@ class ConsoleKernel extends Kernel
      * @var array
      */
     protected $commands = [
-        //
+        CrawlerStartCommand::class
     ];
 
     /**
