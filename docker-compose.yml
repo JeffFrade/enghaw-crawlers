@@ -4,7 +4,7 @@ services:
     build: ./docker/php
     image: enghaw/enghaw-crawlers:php-fpm
     restart: on-failure
-    container_name: enghaw-api-php-fpm
+    container_name: enghaw-crawlers-php-fpm
     command: php-fpm
     volumes:
       - ./:/enghaw-crawlers
