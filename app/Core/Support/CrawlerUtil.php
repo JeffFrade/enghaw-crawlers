@@ -3,7 +3,6 @@
 namespace App\Core\Support;
 
 use App\Core\Helpers\FileHelper;
-use App\Core\Interfaces\CrawlerInterface;
 use App\Core\Services\EngHawApi;
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\FileCookieJar;

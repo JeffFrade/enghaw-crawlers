@@ -44,8 +44,8 @@ class EngHawApi
      */
     public function storeMusic(array $music)
     {
-        return $this->getClient()->request('POST', '/music', [
-            'body' => $music
+        return $this->getClient()->request('POST', '/api/music', [
+            'form_params' => $music
         ])->getBody()->getContents();
     }
 }
