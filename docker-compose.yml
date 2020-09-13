@@ -1,0 +1,15 @@
+version: '3'
+services:
+  php-fpm:
+    build: ./docker/php
+    image: enghaw/enghaw-crawlers:php-fpm
+    restart: on-failure
+    container_name: enghaw-crawlers-php-fpm
+    command: php-fpm
+    volumes:
+      - ./:/enghaw-crawlers
+    healthcheck:
+      test: ['CMD', 'sh', '-c', 'netstat -an | fgrep 9000 | fgrep -q LISTEN']
+      interval: 10s
+      timeout: 5s
+      retries: 2
