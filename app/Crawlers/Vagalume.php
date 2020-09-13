@@ -123,7 +123,7 @@ class Vagalume extends CrawlerUtil implements CrawlerInterface
         $musicTitle = $this->getMusicTitle($page);
         $musicContent = $this->getMusicContent($page);
 
-        if (!empty($musicTitle) || !empty($musicContent)) {
+        if (!empty($musicTitle) && !empty($musicContent)) {
             $data = [
                 'title' => $musicTitle,
                 'music' => $musicContent
